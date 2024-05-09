@@ -155,3 +155,11 @@ Website by Websolute
         });
     });
 });
+var button = document.getElementById("myButton");
+var clickCount = 0;
+var clickCountElement = document.getElementById("clickCount");
+
+button.addEventListener("click", function() {
+  clickCount++;
+  clickCountElement.textContent = clickCount;
+});
