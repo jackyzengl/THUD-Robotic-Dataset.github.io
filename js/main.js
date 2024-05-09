@@ -155,11 +155,21 @@ Website by Websolute
         });
     });
 });
+// var button = document.getElementById("myButton");
+// var clickCount = 0;
+// var clickCountElement = document.getElementById("clickCount");
+
+// button.addEventListener("click", function() {
+//   clickCount++;
+//   clickCountElement.textContent = clickCount;
+// });
+
 var button = document.getElementById("myButton");
-var clickCount = 0;
+var clickCount = localStorage.getItem("clickCount") || 1; // 从本地存储中获取点击次数，默认为0
 var clickCountElement = document.getElementById("clickCount");
 
 button.addEventListener("click", function() {
   clickCount++;
   clickCountElement.textContent = clickCount;
+  localStorage.setItem("clickCount", clickCount); // 将点击次数存储到本地存储中
 });
